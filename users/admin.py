@@ -11,15 +11,15 @@ class CustomUserAdmin(UserAdmin):
     # Example:
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal Info', {'fields': ('user_name', 'first_name', 'last_name')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name')}),
         # Add any additional fields here as per your model
     )
     add_fieldsets = (
         # Configuration for adding a new CustomUser
         # Include required fields for creating a new user
     )
-    list_display = ('email', 'user_name', 'first_name', 'last_name')
-    search_fields = ('email', 'user_name', 'first_name', 'last_name')
+    list_display = ('email', 'first_name', 'last_name')
+    search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
 
 
